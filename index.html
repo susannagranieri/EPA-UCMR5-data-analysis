@@ -6,20 +6,26 @@
     <title>Data Analysis: EPA UCMR5 Data</title>
 </head>
 <body>
-    <p>Data analysis of UCMR5, EPA’s data on public drinking water systems monitored for almost 30 types of forever chemicals</p>
-
-<h1>Map</h1>
+    <p>Data analysis of UCMR5, EPA’s data on public drinking water systems monitored for almost 30 types of forever chemicals. I used the EPA's UCMR5 data finder tool and requested data from PA, DE, NY and NJ. This query returned 187,654 rows of data focused on findings from 1,001 PWS (public water systems). But, according to [put EPA instructions here], there are not results from all PWSs in the selected states.</p>
+    <p>Then I also downloaded UCMR5 data which showed PWSIDs (public water system identification numbers) that corresponded with zip codes. This allows us to geocode the data. I combined the two data sets, maching PWSIDs from each dataset to corresponding, matching zip codes.</p>
+    <p>I then moved onto the zip code analysis, in which I found that 1,259 rows of data did not correspond to a zip code. This could mean that there was no matching PWSID, or some other error in the dataset. This means only 0.67% of data is missing, which is a relatively miniscule error rate.</p>
 
 <h3>Contaminant Level Intensity</h3>
+    <p> I found the maximum contaminant level by zip code, but exlided results that read "<MCL", meaning "less than minimum collection level." In our analysis, those values =0. 
+    Creating this map helps identify areas of higher contaminants, based on the nearly 30 tested-for forever chemicals.</p>
     <p> This map shows the changes in contaminant concentration by zip code as reported by the EPA. Note: Of nearly 188,000 rows of data for New Jersey, New York, Pennsylvania and Delaware, approximately 1,300 did not have available location information.</p>
 <iframe src="delaware_river_heatmap (1).html" width="75%" height="550px" frameborder="10"></iframe>
 
-<h3>Boxplot of Contaminant Levels</h3>
-<img src="top_contaminants_boxplot.png" alt="Boxplot of top contaminants">
-
 <h3>Contaminant Trends Over Time</h3>
+    <p>The changes over time in collection regarding lithium yields interesting reporting questions. There were nearly 6,500 rows that included finding a report of lithium found in testing of a PWS.
+    Is there a seasonal impact on level of lithium? Do certain locations have a higher concentration?</p>
 <img src="monthly_trends_lineplot.png" alt="Monthly trends line plot">
 
+<p>These box plots represent different ways of looking at the data. It's helpful to see different contaminant levels, how the levels change over time depending on the region, how each state's concentrations differ, if the PWS size had any impact, etc.
+    These charts lead to reporting questions: Why are small PWSs showing signs of higher concentration levels? Wouldn't you expect that to happen to a larger PWS? How does the EPA define the difference? Does groundwater cause more contaminantion than sewage systems?</p>
+ <h3>Boxplot of Contaminant Levels</h3>
+<img src="top_contaminants_boxplot.png" alt="Boxplot of top contaminants">
+    
 <h3>Distribution by EPA region</h3>
 <img src="epa_region_boxplot.png" alt="Distribution by EPA region">
 
@@ -34,6 +40,10 @@
 
 <h3>Distribution by Contaminated-Water Type</h3>
 <img src="water_type_boxplot.png" alt="Distribution by Water Type">        
+
+    <p> Further questions: How can I use the population counts by county along the Delaware River and compare that to contamination levels?
+    There are nearly 40,000 results located within 20 miles of the Delaware River. Is any of this important? 
+    Need to offer data analysis of what these mean: UCMR5 data dictionary, result level definitions, limitations in reporting from EPA & large dataset analysis, etc.</p>
 
 </body>
 </html>
