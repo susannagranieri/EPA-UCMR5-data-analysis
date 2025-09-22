@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red235\green237\blue255;\red245\green123\blue47;}
+{\*\expandedcolortbl;;\cssrgb\c93607\c94401\c100000;\cssrgb\c97756\c56070\c23668;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2     body \{\
+        font-family: Arial, sans-serif;\
+        background-color: #f0f0f0;\
+    \}\
+\
+    h1 \{\
+        color: #949494;\
+        text-align: center;\
+    \}\
+\
+    .button \{\
+        background-color: light blue;\
+        color: white;\
+        padding: \strokec3 10px\strokec2  \strokec3 15px\strokec2 ;\
+        border: none;\
+        cursor: pointer;\
+    \}}
